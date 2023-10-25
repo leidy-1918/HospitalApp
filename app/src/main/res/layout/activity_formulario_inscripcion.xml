@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormularioInscripcionActivity">
+
+
+    <EditText
+        android:id="@+id/tvNombre"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/nombre_completo"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="90dp" />
+
+    <EditText
+        android:id="@+id/tvEdad"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="56dp"
+        android:hint="@string/edad"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombre"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/tvSeleccion"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="75dp"
+        android:text="Seleccione un tipo de sangre"
+        app:layout_constraintTop_toBottomOf="@+id/tvEdad"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="115dp" />
+
+    <Spinner
+        android:id="@+id/spnTipoSangre"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="64dp"
+        android:entries="@array/tipos_sangre"
+        android:hint="Tipo de sangre"
+        app:layout_constraintTop_toBottomOf="@+id/tvSeleccion"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <CheckBox
+        android:id="@+id/tvAptoParaDonar"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="72dp"
+        android:text="¿Está apto para donar?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnTipoSangre"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="94dp"
+        android:layout_marginBottom="68dp"
+        android:text="Enviar Donación"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAptoParaDonar"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
